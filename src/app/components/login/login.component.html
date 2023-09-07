@@ -1,0 +1,133 @@
+<div class="container mt-5">
+    <div *ngIf="log">
+        <div class="login-box">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title text-center mb-4">Iniciar Sesión</h2>
+                                <form #f="ngForm" (ngSubmit)="loginOn()" class="form" >
+                            <div class="input-group mb-3">
+                                <input name="user" type="text" class="form-control" placeholder="User Name" [(ngModel)]="login.user">
+                                <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input name="password" type="password" class="form-control" placeholder="Password" [(ngModel)]="login.password">
+                                <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary btn-block">Iniciar<i class="fas fa-key"></i></button>
+                                </div>
+                            </div>
+                            </form>
+                            <br>
+                            <!-- /.social-auth-links -->
+                            <p class="mb-0 text-center">
+                            <a  class="text-center" (click)="crear()">Crear cuenta</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="crep" >
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title text-center mb-4">Registrate</h2>
+                            <form #f="ngForm" (ngSubmit)="createCount()" class="form" >
+                            <div class="input-group mb-3">
+                              <select name="tipodoc" required="true" id="tipodoc" class="form-control"  [(ngModel)]="persona.tipodoc">
+                                <option value="">Tipo Documento</option>
+                                <option value="CC">Cédula de Ciudadanía</option>
+                                <option value="TI">Tarjeta de Identidad</option>
+                                <option value="PA">Pasaporte</option>
+                                <option value="NIT">NIT</option>
+                              </select>
+                              <div class="input-group-append">
+                                <div class="input-group-text">
+                                  <span class="fas fa-user"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="input-group mb-3">
+                              <input name="numdoc" type="number" required="true" class="form-control" placeholder="Número Documento" [(ngModel)]="persona.numdoc">
+                              <div class="input-group-append">
+                                <div class="input-group-text">
+                                  <span class="fas fa-user"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="input-group mb-3">
+                              <input name="nombre" type="text" required="true"  class="form-control" placeholder="Nombre" [(ngModel)]="persona.nombre">
+                              <div class="input-group-append">
+                                <div class="input-group-text">
+                                  <span class="fas fa-user"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="input-group mb-3">
+                              <input name="apeper" type="text" required="true" class="form-control" placeholder="Apellido" [(ngModel)]="persona.apeper">
+                              <div class="input-group-append">
+                                <div class="input-group-text">
+                                  <span class="fas fa-user"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="input-group mb-3">
+                              <input name="correo" type="text" required="true" class="form-control" placeholder="correo" [(ngModel)]="persona.correo">
+                              <div class="input-group-append">
+                                <div class="input-group-text">
+                                  <span class="fas fa-envelope"></span>
+                                </div>
+                              </div>
+                            </div>
+                  
+                            <div class="input-group mb-3">
+                              <input name="user" type="text" class="form-control"  required="true" placeholder="User" [(ngModel)]="usuario.user">
+                              <div class="input-group-append">
+                                <div class="input-group-text">
+                                  <span class="fas fa-envelope"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="input-group mb-3">
+                              <input name="password"  type="password" class="form-control" required="true"  placeholder="Password" [(ngModel)]="usuario.password">
+                              <div class="input-group-append">
+                                <div class="input-group-text">
+                                  <span class="fas fa-lock"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              
+                              <!-- /.col -->
+                              <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary btn-block">Crear<i class="fas fa-key"></i></button>
+                              </div>
+                              <!-- /.col -->
+                            </div>
+                          </form><br>
+                          <p class="text-center">
+                            <a (click)="loginom()" class="text-center">Ya tengo una cuenta</a>
+                          </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+     
