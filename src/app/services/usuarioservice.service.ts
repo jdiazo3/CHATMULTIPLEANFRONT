@@ -11,7 +11,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 
 export class UsuarioserviceService {
 
-  apiUrl = 'http://localhost:8086/usuarios';
+  apiUrl = 'https://dbt3llfc-8086.use2.devtunnels.ms/usuarios';
   
   constructor(private http: HttpClient,
               private jwtHelper: JwtHelperService ) { }

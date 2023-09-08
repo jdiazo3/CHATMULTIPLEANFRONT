@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color:#34363D;
 }
 
 .chat-container {
@@ -14,7 +14,14 @@ body {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; /* Para evitar que el área de mensajes oculte el input */
+    background-image: url('../../../../assets/images/fondo.jpg');
+    background-size: cover; /* Ajusta el tamaño para cubrir todo el contenedor */
+    background-repeat: no-repeat; /* Evita repetir la imagen */
+    background-position: center center; /* Centra la imagen */
 }
 
 .chat-header {
@@ -27,7 +34,8 @@ body {
 .chat-messages {
     padding: 10px 16px;
     max-height: 400px;
-    overflow-y: auto;
+    flex-grow: 1; /* La sección de mensajes crecerá para llenar el espacio disponible */
+    overflow-y: auto; /* Hace que el área de mensajes sea desplazable */
 }
 
 .message {
@@ -38,29 +46,58 @@ body {
 }
 
 .sender {
-    background-color: #4caf50;
+    background-color: #e0e0e0 ;
+    text-align: right;
     align-self: flex-end;
-    color: #fff;
+    color: #000000;
+    margin-left: auto; /* Alinea el mensaje del remitente a la derecha */
 }
 
 .receiver {
-    background-color: #e0e0e0;
+    background-color:#4caf50;
     align-self: flex-start;
+    margin-right: auto; /* Alinea el mensaje del receptor a la izquierda */
 }
+.message-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #777; /* Color de texto más oscuro */
+    font-size: 14px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+  }
 
-.chat-input {
+  .receiver-title {
+    color: #000000; /* Color negro para remitentes */
+  }
+
+  .sender-title {
+    color: #25d366; /* Color verde para el usuario actual (tú) */
+  }
+  .chat-input {
     display: flex;
     align-items: center;
     background-color: #f5f5f5;
     padding: 8px 16px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Ajusta el máximo ancho según tu diseño */
 }
 
 .chat-input input {
-    flex-grow: 1;
     border: none;
     padding: 8px;
     border-radius: 4px;
     margin-right: 8px;
+    flex-grow: 1;
+    max-width: none; /* Asegura que no se limite el ancho */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+form{
+    max-width: none; /* Asegura que no se limite el ancho */
+    width: 100%; /* Ocupa todo el ancho disponible */
 }
 
 .chat-input button {
@@ -70,6 +107,7 @@ body {
     padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
+    max-width: none; /* Asegura que no se limite el ancho */
 }
 
 .chat-input button:hover {

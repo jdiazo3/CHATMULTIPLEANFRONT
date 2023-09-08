@@ -1,21 +1,30 @@
 <body>
-<div class="chat-container">
-  <div class="chat-header">
-      <h2>Grupo de Chat</h2>
-  </div>
-  <div class="chat-messages">
-      <div class="message sender">
-          <p>Hola, ¿cómo están?</p>
-      </div>
-      <div class="message receiver">
-          <p>Hola, estamos bien, ¿y tú?</p>
-      </div>
-      <!-- Agrega más mensajes aquí -->
-  </div>
-  <div class="chat-input">
-      <input type="text" placeholder="Escribe tu mensaje...">
-      <button>Enviar</button>
-  </div>
-</div>
-</body>   
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Grupo de Chat</h2>
+        </div>
+        <div class="chat-messages">
+            <div class="message" *ngFor="let message of messages" [ngClass]="{'sender': message.sender, 'receiver': !message.sender}">
+                <p class="message-title" [ngClass]="{'receiver-title': !message.sender, 'sender-title': message.sender}">
+                        {{ message.sender ? 'Tú' : message.usuario.user }}
+                </p>
+                <p>{{ message.mensaje }}</p>
+            </div>
+        </div>
+        <div class="chat-input">
+           <form #f="ngForm" (ngSubmit)="enviarMensaje()">
+                <div class="row">
+                    <div class="col-10">
+                        <input type="text" placeholder="Escribe tu mensaje..." name="mensaje" [(ngModel)]="newMensaje.mensaje" required>
+                    </div>
+                    <div class="col-2">
+                    <button type="submit">
+                        <i class="fa fa-paper-plane"></i>
+                    </button>
+                    </div>
+                </div>
+            </form> 
+        </div>
+    </div>
+</body>
 <router-outlet></router-outlet>
