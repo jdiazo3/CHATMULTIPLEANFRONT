@@ -10,8 +10,8 @@ import { throwError } from 'rxjs';
 })
 export class PersonaserviceService {
 
-  apiUrl = 'https://dbt3llfc-8086.use2.devtunnels.ms/personas';
-  
+  apiUrl = 'http://localhost:8086/personas';
+
   constructor(private http: HttpClient) { }
   //trae los actores y productores
   getPersona() {

@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color:#e1dcdc;
+
+}
+#menu-lateral {
+width: 250px;
+background-image: url('../../../../assets/images/fondo.jpg');
+position: fixed;
+top: 0;
+left: 0;
+height: 100%;
+overflow: auto;
+}
+
+#menu-lateral ul {
+list-style-type: none;
+padding: 0;
+}
+
+#menu-lateral ul li {
+padding: 10px;
+text-align: center;
+}
+
+#menu-lateral ul li:hover {
+background-color: #555;
+}
+
+.chat-container {
+  margin: 7%;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden; /* Para evitar que el área de mensajes oculte el input */
+  /*background-image: url('../../../../assets/images/fondo.jpg');*/
+  background-size: cover; /* Ajusta el tamaño para cubrir todo el contenedor */
+  background-repeat: no-repeat; /* Evita repetir la imagen */
+  background-position: center center; /* Centra la imagen */
+  padding: 0% 23% 0% 23%;
+  text-align: center;
+  justify-content: center;
+
+}
+
+

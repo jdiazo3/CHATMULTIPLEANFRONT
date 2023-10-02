@@ -2,12 +2,12 @@ import { HttpClient, HttpErrorResponse, HttpStatusCode } from '@angular/common/h
 import { Injectable } from '@angular/core';
 import { Mensaje, NewMensaje } from '../interfaces/mensaje.interface';
 import { Observable, catchError, interval, switchMap, throwError } from 'rxjs';
-
+import { FormsModule } from '@angular/forms';
 @Injectable({
   providedIn: 'root'
 })
 export class MensajeserviceService {
-  apiUrl = 'https://dbt3llfc-8086.use2.devtunnels.ms/mensajes';
+  apiUrl = 'http://localhost:8086/mensajes';
   constructor(private http: HttpClient) { }
 
    //trae los actores y productores
@@ -21,7 +21,7 @@ export class MensajeserviceService {
     console.log("llega a hacer la peticion");
     return this.http.post<NewMensaje>(this.apiUrl,mensaje).pipe(catchError(this.errorMensaje));
   }
-  
+
 //captura los errores
 errorMensaje(error: HttpErrorResponse): Observable<never>  {
   if (error.status == HttpStatusCode.PreconditionFailed){
