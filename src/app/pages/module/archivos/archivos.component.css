@@ -8,6 +8,10 @@ body {
   background-color:#e1dcdc;
 
 }
+@font-face {
+  font-family: 'merri';
+  src: url('../../../../assets/fuentes/Merriweather/Merriweather-Regular.woff') format('woff');
+}
 #menu-lateral {
 width: 250px;
 background-image: url('../../../../assets/images/fondo.jpg');
@@ -26,6 +30,7 @@ padding: 0;
 #menu-lateral ul li {
 padding: 10px;
 text-align: center;
+font-family: 'merri';
 }
 
 #menu-lateral ul li:hover {
@@ -50,116 +55,4 @@ background-color: #555;
   text-align: center;
   justify-content: center;
 
-}
-
-
-
-.chat-messages {
-  background-image: url('../../../../assets/images/fondo.jpg');
-  padding: 2% 2% 2% 2%;
-  max-height: 100%;
-  flex-grow: 1; /* La sección de mensajes crecerá para llenar el espacio disponible */
-  overflow-y: auto; /* Hace que el área de mensajes sea desplazable */
-  max-width: 100%;
-  min-height: 300px;
-  transition: height 5s ease; /* Agrega una transición suave de altura */
-
-}
-
-.message {
-  padding: 2% 2%;
-  border-radius: 8px;
-  margin-bottom: 2%;
-  max-width: 48%;
-}
-
-.sender {
-  background-color: #e1dcdc;
-  text-align: right;
-  align-self: flex-end;
-  color: #000000;
-  margin-left: auto; /* Alinea el mensaje del remitente a la derecha */
-  Font-family: Courier New;
-}
-
-.receiver {
-text-align: left;
-background-color: #b22929;
-color: #d3d3d3;
-align-self: flex-start;
-margin-right: auto; /* Alinea el mensaje del receptor a la izquierda */
-Font-family: Courier New;
-}
-.message-title {
-
-  margin-bottom: 5px;
-  color: #777; /* Color de texto más oscuro */
-  font-size: 11px; /* Tamaño de fuente más grande */
-  font-weight: bold; /* Texto en negrita */
-  border-radius: 5px;
-
-}
-
-.receiver-title {
-  color: #ffffff;
-  font-family: Segoe script;
-  font-size: 15px;
-}
-
-.sender-title {
-  color: #b22929;
-  background-color: #b2292900;
-  font-family: Segoe script;
-  font-size: 15px;
-}
-.chat-header {
-  background-color: #b22929;
-  color: #fff;
-  padding: 10px 16px;
-  text-align: center;
-  border-radius: 7px 7px 0px 0px;
-  max-width: 100%;
-  font-family: Segoe script;
-
-}
-.chat-foot{
-background-color: #e5dfdf;
-color: #fff;
-padding: 2% 3% 2% 3%;
-text-align: center;
-border-radius: 0px 0px 7px 7px;
-max-width: 100%;
-justify-content: center;
-display: flex;
-
-}
-
-
-.chat-foot input {
-  border: none;
-  padding: 1%;
-  border-radius: 4px;
-  flex-grow: 1;
-  max-width: none; /* Asegura que no se limite el ancho */
-  width: 100%; /* Ocupa todo el ancho disponible */
-}
-
-form{
-  max-width: none; /* Asegura que no se limite el ancho */
-  width: 100%; /* Ocupa todo el ancho disponible */
-}
-
-.chat-foot button {
-  background-color: #b22929;
-  color: #fff;
-  font-size: 120%;
-  border: none;
-  padding: 6% 25% 6% 22%;
-  border-radius: 4px;
-  cursor: pointer;
-  max-width: none; /* Asegura que no se limite el ancho */
-}
-
-.chat-foot button:hover {
-background-color: #ff8400;
 }

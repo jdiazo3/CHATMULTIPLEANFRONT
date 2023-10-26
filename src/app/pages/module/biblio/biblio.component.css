@@ -8,6 +8,10 @@ body {
   background-color:#e1dcdc;
 
 }
+@font-face {
+  font-family: 'merri';
+  src: url('../../../../assets/fuentes/Merriweather/Merriweather-Regular.woff') format('woff');
+}
 #menu-lateral {
 width: 250px;
 background-image: url('../../../../assets/images/fondo.jpg');
@@ -26,6 +30,7 @@ padding: 0;
 #menu-lateral ul li {
 padding: 10px;
 text-align: center;
+font-family: 'merri';
 }
 
 #menu-lateral ul li:hover {

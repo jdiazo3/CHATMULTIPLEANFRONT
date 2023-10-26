@@ -8,6 +8,11 @@ body {
     background-color:#e1dcdc;
 
 }
+@font-face {
+  font-family: 'merri';
+  src: url('../../../../assets/fuentes/Merriweather/Merriweather-Regular.woff') format('woff');
+}
+
 #menu-lateral {
   width: 250px;
   background-image: url('../../../../assets/images/fondo.jpg');
@@ -26,6 +31,8 @@ body {
 #menu-lateral ul li {
   padding: 10px;
   text-align: center;
+  font-family: 'merri';
+
 }
 
 #menu-lateral ul li:hover {
@@ -42,7 +49,6 @@ body {
     flex-direction: column;
     height: 100vh;
     overflow: hidden; /* Para evitar que el área de mensajes oculte el input */
-    /*background-image: url('../../../../assets/images/fondo.jpg');*/
     background-size: cover; /* Ajusta el tamaño para cubrir todo el contenedor */
     background-repeat: no-repeat; /* Evita repetir la imagen */
     background-position: center center; /* Centra la imagen */
@@ -79,7 +85,7 @@ body {
     align-self: flex-end;
     color: #000000;
     margin-left: auto; /* Alinea el mensaje del remitente a la derecha */
-    Font-family: Courier New;
+    font-family: 'merri';
 }
 
 .receiver {
@@ -88,7 +94,7 @@ body {
   color: #d3d3d3;
   align-self: flex-start;
   margin-right: auto; /* Alinea el mensaje del receptor a la izquierda */
-  Font-family: Courier New;
+  font-family: 'merri';
 }
 .message-title {
 
@@ -102,14 +108,14 @@ body {
 
   .receiver-title {
     color: #ffffff;
-    font-family: Segoe script;
+    font-family: 'merri';
     font-size: 15px;
   }
 
   .sender-title {
     color: #b22929;
     background-color: #b2292900;
-    font-family: Segoe script;
+    font-family: 'merri';
     font-size: 15px;
   }
   .chat-header {
@@ -119,7 +125,7 @@ body {
     text-align: center;
     border-radius: 7px 7px 0px 0px;
     max-width: 100%;
-    font-family: Segoe script;
+    font-family: 'merri';
 
 }
 .chat-foot{
